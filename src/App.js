@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./components/Carousel";
 import Destinations from "./components/Destinations";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Search from "./components/Search";
@@ -15,6 +16,7 @@ const App = () => {
       <Search />
       <Select imageCardData={websiteData.card} />
       <Carousel carousel={websiteData.card} />
+      <Footer />
     </div>
   );
 };
