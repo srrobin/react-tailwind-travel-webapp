@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
+import { MdLightMode,MdNightlight } from "react-icons/md";
+
+
 import {
   FaFacebook,
   FaInstagram,
@@ -13,10 +16,34 @@ import { HiOutlineMenuAlt4 } from "react-icons/hi";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [logo, setLogo] = useState(false);
+  const [theme, setTheme] = useState(null);
+
   const handelNav = () => {
     setNav(!nav);
     setLogo(!nav);
   };
+
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   return (
     <div
       className="flex justify-between 
@@ -36,10 +63,23 @@ const Navbar = () => {
         <li>Book</li>
       </ul>
 
-      <div className="hidden md:flex">
-        <BiSearch className="mr-2 font-bold cursor-pointer" size={20} />
-        <BsPerson className=" font-bold cursor-pointer" size={20} />
+
+      <div className="flex">
+          <button type="button" onClick={handleThemeSwitch} className="bor border-0">
+            {theme === "dark" ? (
+             <MdLightMode className="mr-2 font-bold cursor-pointer" size={20} />
+            ) : (
+              <MdNightlight className="mr-2 font-bold cursor-pointer " size={20} />
+            )}
+          </button>
+        
+       
+        <div className="hidden md:flex">
+                <BiSearch className="mr-2 font-bold cursor-pointer" size={20} />
+                <BsPerson className=" font-bold cursor-pointer" size={20} />
+          </div>
       </div>
+
       {/* hamburger menu */}
 
       <div onClick={handelNav} className="md:hidden cursor-pointer z-10">

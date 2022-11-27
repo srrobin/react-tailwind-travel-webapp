@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../assets/beachVid.mp4";
+import video from "../assets/video.mp4";
 const HeroSection = () => {
   return (
     <div className="w-full h-screen relative">
