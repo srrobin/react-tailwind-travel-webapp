@@ -9,7 +9,7 @@ import Select from "./components/Select";
 import websiteData from "./data/websiteData.json";
 const App = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-black">
       <Navbar />
       <HeroSection />
       <Destinations />

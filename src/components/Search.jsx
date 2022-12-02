@@ -6,8 +6,8 @@ const Search = () => {
     <div className="max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-4">
       <div className="lg:col-span-2 flex flex-col justify-evenly">
         <div className="">
-          <h1>Lorem ipsum dolor sit amet.</h1>
-          <p className="py-4">
+          <h1 className="text-slate-900 dark:text-white">Lorem ipsum dolor sit amet.</h1>
+          <p className="py-4 text-slate-500 dark:text-slate-400">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi eos
             hic rem error voluptatum, quasi harum natus dignissimos dolorum
             maxime cupiditate beatae consequatur sapiente ad ipsam voluptatibus
@@ -29,8 +29,8 @@ const Search = () => {
               <RiCustomerService2Fill size={50} />
             </button>
             <div>
-              <h3 className="py-2">Lorem ipsum dolor </h3>
-              <p className="py-1">
+              <h3 className="py-2 text-slate-900 dark:text-white">Lorem ipsum dolor </h3>
+              <p className="py-1 text-slate-500 dark:text-slate-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
               </p>
             </div>
@@ -40,8 +40,8 @@ const Search = () => {
               <MdOutlineTravelExplore size={50} />
             </button>
             <div>
-              <h3 className="py-2">Lorem ipsum dolor </h3>
-              <p className="py-1">
+              <h3 className="py-2 text-slate-900 dark:text-white">Lorem ipsum dolor </h3>
+              <p className="py-1 text-slate-500 dark:text-slate-400">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
               </p>
             </div>
@@ -51,9 +51,9 @@ const Search = () => {
 
       <div>
         <div className="border text-center uppercase p-3">
-          <p className="py-2">get and additional 10% 0ff</p>
-          <p className="py-4">12 hours left</p>
-          <p className="b bg-slate-900 text-white py-3">book now and safe</p>
+          <p className="py-2 text-slate-500 dark:text-slate-400">get and additional 10% 0ff</p>
+          <p className="py-4 text-slate-500 dark:text-slate-400">12 hours left</p>
+          <p className="b text-slate-500 dark:text-slate-400 py-3">book now and safe</p>
         </div>
         <form className="w-full">
           <div className="flex flex-col my-4">

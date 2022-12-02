@@ -45,17 +45,16 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className="flex justify-between 
+    <div className="flex justify-between bg-transparent sticky top-0
     items-center h-20 px-4 absolute z-10 text-white w-full"
     >
-      <div>
+      <div className="cursor-pointer">
         <h2 onClick={handelNav} className={logo ? "hidden" : "block"}>
           Travel .{" "}
         </h2>
       </div>
 
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex cursor-pointer">
         <li>Home</li>
         <li>Destinations</li>
         <li>Travel</li>
@@ -64,14 +63,14 @@ const Navbar = () => {
       </ul>
 
 
-      <div className="flex">
-          <button type="button" onClick={handleThemeSwitch} className="bor border-0">
+      <div className="md:flex">
+          <div onClick={handleThemeSwitch} className="">
             {theme === "dark" ? (
              <MdLightMode className="mr-2 font-bold cursor-pointer" size={20} />
             ) : (
               <MdNightlight className="mr-2 font-bold cursor-pointer " size={20} />
             )}
-          </button>
+          </div>
         
        
         <div className="hidden md:flex">

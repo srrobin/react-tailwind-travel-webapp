@@ -7,8 +7,8 @@ import maldives3 from "../assets/maldives3.jpg";
 const Destinations = () => {
   return (
     <div className="max-w-[1240px] mx-auto my-16 px-4 text-center">
-      <h1 className="capitalize text-slate-700 dark:text-gray-100">all inclusive resort</h1>
-      <p className="mb-4">Lorem ipsum dolor sit amet consectetur.</p>
+      <h1 className="capitalize text-slate-900 dark:text-white">all inclusive resort</h1>
+      <p className="mb-4 text-slate-500 dark:text-slate-400">Lorem ipsum dolor sit amet consectetur.</p>
       <div className="grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4">
         <img
           className="w-full h-full object-cover  col-span-2 md:col-span-3 row-span-2"
